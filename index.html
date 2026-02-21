@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Insyra Support</title>
+  <meta name="description" content="Contact Insyra Support — help, questions, and feedback." />
+  <style>
+    :root{
+      --bg1:#6B745F;
+      --bg2:#55604C;
+      --card: rgba(255,255,255,.12);
+      --card2: rgba(255,255,255,.08);
+      --stroke: rgba(255,255,255,.18);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.72);
+      --shadow: 0 20px 60px rgba(0,0,0,.25);
+    }
+
+    *{ box-sizing: border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+                   "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(1200px 800px at 20% 10%, rgba(255,255,255,.14), transparent 60%),
+        radial-gradient(900px 700px at 90% 30%, rgba(255,255,255,.10), transparent 55%),
+        linear-gradient(160deg, var(--bg1), var(--bg2));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding: 28px;
+    }
+
+    .wrap{
+      width: min(920px, 100%);
+      display:grid;
+      gap: 18px;
+    }
+
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 12px;
+      padding: 10px 4px;
+      opacity: .95;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      user-select:none;
+    }
+
+    .logo{
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      background: rgba(255,255,255,.18);
+      border: 1px solid var(--stroke);
+      box-shadow: 0 10px 30px rgba(0,0,0,.15);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight: 800;
+      letter-spacing: .5px;
+    }
+
+    .brand h1{
+      margin:0;
+      font-size: 16px;
+      letter-spacing: .2px;
+      font-weight: 700;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.12);
+      border: 1px solid var(--stroke);
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .card{
+      padding: 28px;
+      border-radius: 26px;
+      background: linear-gradient(180deg, var(--card), var(--card2));
+      border: 1px solid var(--stroke);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .headline{
+      display:grid;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .headline h2{
+      margin:0;
+      font-size: clamp(26px, 4vw, 38px);
+      line-height: 1.08;
+      letter-spacing: -0.6px;
+      font-weight: 800;
+    }
+
+    .headline p{
+      margin:0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.55;
+      max-width: 56ch;
+    }
+
+    .actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    a.btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap: 10px;
+      padding: 12px 16px;
+      border-radius: 16px;
+      text-decoration:none;
+      font-weight: 700;
+      font-size: 14px;
+      border: 1px solid rgba(255,255,255,.20);
+      background: rgba(255,255,255,.14);
+      color: var(--text);
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+    }
+
+    a.btn:hover{
+      transform: translateY(-1px);
+      background: rgba(255,255,255,.18);
+      border-color: rgba(255,255,255,.26);
+    }
+
+    a.btn.primary{
+      background: rgba(255,255,255,.92);
+      color: #2b2f28;
+      border-color: rgba(255,255,255,.92);
+    }
+
+    a.btn.primary:hover{
+      background: rgba(255,255,255,1);
+      border-color: rgba(255,255,255,1);
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .mini{
+      padding: 18px;
+      border-radius: 20px;
+      background: rgba(255,255,255,.10);
+      border: 1px solid var(--stroke);
+    }
+
+    .mini h3{
+      margin:0 0 8px 0;
+      font-size: 14px;
+      letter-spacing: .2px;
+      font-weight: 800;
+    }
+
+    .mini p{
+      margin:0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 10px;
+      padding: 14px 16px;
+      margin-top: 14px;
+      border-radius: 18px;
+      background: rgba(0,0,0,.12);
+      border: 1px solid rgba(255,255,255,.14);
+    }
+
+    .row .label{
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .2px;
+      margin-bottom: 2px;
+    }
+
+    .row .value{
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: .1px;
+      word-break: break-word;
+    }
+
+    .copy{
+      cursor: pointer;
+      user-select:none;
+      font-size: 12px;
+      font-weight: 800;
+      padding: 8px 10px;
+      border-radius: 12px;
+      background: rgba(255,255,255,.14);
+      border: 1px solid rgba(255,255,255,.18);
+      color: var(--text);
+      transition: transform .12s ease;
+    }
+
+    .copy:active{ transform: scale(.98); }
+
+    footer{
+      text-align:center;
+      color: rgba(255,255,255,.55);
+      font-size: 12px;
+      padding: 8px 4px 0;
+    }
+
+    @media (max-width: 760px){
+      .grid{ grid-template-columns: 1fr; }
+      .card{ padding: 22px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo">I</div>
+        <h1>Insyra</h1>
+      </div>
+      <div class="pill">Support • reply in 24–48h</div>
+    </div>
+
+    <section class="card">
+      <div class="headline">
+        <h2>Insyra Support</h2>
+        <p>
+          Need help, have questions, or want to share feedback? Contact us — we’re happy to help.
+        </p>
+      </div>
+
+      <div class="row">
+        <div>
+          <div class="label">Email</div>
+          <div class="value" id="emailText">insyra.app@gmail.com</div>
+        </div>
+        <button class="copy" id="copyBtn" type="button">Copy</button>
+      </div>
+
+      <div class="actions">
+        <a class="btn primary" href="mailto:insyra.app@gmail.com?subject=Insyra%20Support">Email Support</a>
+        <a class="btn" href="mailto:insyra.app@gmail.com?subject=Insyra%20Feedback">Send Feedback</a>
+      </div>
+
+      <div class="grid">
+        <div class="mini">
+          <h3>What to include</h3>
+          <p>
+            • What happened (short)<br/>
+            • Your device model + iOS version<br/>
+            • Screenshots if possible
+          </p>
+        </div>
+        <div class="mini">
+          <h3>Response time</h3>
+          <p>
+            We typically respond within <strong>24–48 hours</strong>.
+            During weekends it may take a little longer.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Insyra. All rights reserved.
+    </footer>
+  </main>
+
+  <script>
+    const email = "insyra.app@gmail.com";
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    document.getElementById("copyBtn").addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(email);
+        const btn = document.getElementById("copyBtn");
+        const prev = btn.textContent;
+        btn.textContent = "Copied ✓";
+        setTimeout(() => (btn.textContent = prev), 1200);
+      } catch (e) {
+        // Fallback: select text (old browsers)
+        alert("Copy not supported. Email: " + email);
+      }
+    });
+  </script>
+</body>
+</html>
